@@ -5,6 +5,7 @@
       color="gray"
       variant="ghost"
       block
+      class="justify-start"
       size="xl"
       aria-label="Theme"
       :label="isDark ? 'Переключить на дневную тему' : 'Переключить на ночную тему'"

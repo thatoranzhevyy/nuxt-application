@@ -5,9 +5,22 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/i18n"
   ],
+  ui: {
+    global: true,
+    icons: ['heroicons', 'ph'],
+  },
+  colorMode: {
+    preference: "system",
+    fallback: "light",
+    hid: "nuxt-color-mode-script",
+    globalName: "__NUXT_COLOR_MODE__",
+    componentName: "ColorScheme",
+    classPrefix: "",
+    classSuffix: "-mode",
+    storageKey: "nuxt-color-mode"
+  },
 
   i18n: {
-
     strategy: "no_prefix",
     defaultLocale: "ru",
     langDir: "locales",
@@ -26,7 +39,7 @@ export default defineNuxtConfig({
       {
         code: "kz",
         iso: "kz-KZ",
-        name: "Kazakh",
+        name: "Қазақша",
         file: "kz.json"
       }
     ]

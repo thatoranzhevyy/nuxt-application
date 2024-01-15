@@ -3,7 +3,7 @@ const isOpen = ref(false);
 </script>
 
 <template>
-  <div class="px-2 py-2 sm:px-6">
+  <div class="p-2 sm:p-4">
     <div class="flex items-center justify-between">
       <NuxtLink to="/login/">
         <UButton
@@ -19,12 +19,14 @@ const isOpen = ref(false);
         @click="isOpen = true"
         color="gray"
         variant="ghost"
-        class="text-xl font-semibold leading-6 text-gray-900 dark:text-white uppercase"
+        class="text-base font-semibold leading-6 text-gray-900 dark:text-white uppercase"
         label="Настройки"
       />
       <UModal v-model="isOpen">
-        <UCard>
-          <template #header>
+        <div
+          class="rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900">
+
+          <div class="px-5 py-3">
             <div class="flex items-center justify-between">
               <h3 class="text-xl font-semibold leading-6 text-gray-900 dark:text-white">
                 Настройки
@@ -37,17 +39,12 @@ const isOpen = ref(false);
                 @click="isOpen = false"
               />
             </div>
-          </template>
-
-          <template #default>
-            <div>
-              <h3 class="text-md font-semibold leading-6 text-gray-900 dark:text-white">
-                Цветовая тема
-              </h3>
-              <ColorModeSwitcher />
-            </div>
-          </template>
-        </UCard>
+          </div>
+          <div class="flex flex-col p-4 gap-2">
+            <ColorModeSwitcher />
+            <LanguageSwitcher />
+          </div>
+        </div>
       </UModal>
     </div>
   </div>
