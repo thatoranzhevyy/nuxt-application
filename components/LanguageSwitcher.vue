@@ -8,7 +8,6 @@ const toggleLocales = () => {
 </script>
 
 <template>
-
   <ClientOnly>
     <UButton
       icon='i-ph-translate-bold'

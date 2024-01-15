@@ -11,7 +11,6 @@ export default function useElectron() {
   const isServer = process.server || typeof window === 'undefined' || typeof window.require === 'undefined'
   const isElectron = !isServer && navigator.userAgent.toLowerCase().includes('electron')
   if (!isElectron || isServer) return { isElectron }
-
   // Initialize electron
   const electron = window.require('electron')
 
