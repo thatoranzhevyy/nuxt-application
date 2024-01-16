@@ -11,7 +11,7 @@ const isOpen = ref(false);
           color="gray"
           variant="ghost"
           class="text-xl font-semibold leading-6 text-gray-900 dark:text-white uppercase"
-          icon="i-heroicons-arrow-left-16-solid"
+          icon="i-ph-arrow-left-bold"
         />
       </NuxtLink>
       <UButton
@@ -34,14 +34,14 @@ const isOpen = ref(false);
                 color="gray"
                 variant="ghost"
                 size="md"
-                icon="i-heroicons-x-mark-20-solid"
+                icon="i-ph-x-bold"
                 @click="isOpen = false"
               />
             </div>
           </div>
           <div class="flex flex-col gap-2 p-2">
-            <ColorModeSwitcher />
-            <LanguageSwitcher />
+            <ColorModeSwitcherMenuItem />
+            <LanguageSwitcherMenuItem />
           </div>
         </div>
       </UModal>

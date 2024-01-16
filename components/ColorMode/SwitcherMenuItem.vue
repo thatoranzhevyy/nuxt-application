@@ -14,7 +14,7 @@ const isDark = computed({
 <template>
   <ClientOnly>
     <UButton
-      :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
+      :icon="isDark ? 'i-ph-moon-bold' : 'i-ph-sun-bold'"
       color="gray"
       variant="ghost"
       block
